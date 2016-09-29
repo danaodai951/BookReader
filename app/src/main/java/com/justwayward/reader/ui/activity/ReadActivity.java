@@ -207,6 +207,9 @@ public class ReadActivity extends BaseActivity implements BookReadContract.View 
 
         mPresenter.attachView(this);
         mPresenter.getBookToc(recommendBooks._id, "chapters");
+
+        //设置页面的亮度
+        ScreenUtils.setScreenBrightness(SettingManager.getInstance().getReadBrightness(), this);
     }
 
 
